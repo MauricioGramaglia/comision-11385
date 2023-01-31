@@ -220,6 +220,8 @@ header nav ul li a{
 }
 .cabana img{
     padding: 15px;
+    width: 650px;
+    height: 520px;
 }
 
 /*!---------CSS PAGE SERVICIOS---------*/
@@ -244,7 +246,6 @@ header nav ul li a{
     align-items: center;
     padding: 30px;
 }
-
 
 /** -------IMAGENES DE PAGE GALERIA-----------*/
 .grid-galeria{
@@ -383,8 +384,8 @@ transition: 0.6s;
 }
     .cabana img{
         padding: 10px;
-        width: 450px;
-        height: 550px;
+        width: 500px;
+        height: 450px;
 }
 .servicios-2{
     display: flex;
@@ -406,8 +407,8 @@ transition: 0.6s;
     }
     .cabana img{
         padding: 10px;
-        width: 400px;
-        height: 500px;
+        width: 500px;
+        height: 400px;
 }
     .cabana div{
         width: 700px;
@@ -459,7 +460,7 @@ transition: 0.6s;
 
     .cabana img{
         padding: 10px;
-        width: 349px;
+        width: 350px;
         height: 290px;
 }
     .hero{
