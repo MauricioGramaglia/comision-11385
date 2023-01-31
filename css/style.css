@@ -530,6 +530,16 @@ transition: 0.6s;
         -webkit-box-shadow: 0px 0px 1px -1px rgba(22,120,235,1);
         -moz-box-shadow: 0px 0px 1px -1px rgba(22,120,235,1);
     }
+
+    .servicios-1 img{
+        width: 350px;
+        height: 250px;
+    }
+    .servicios-1 div{
+        width: 100%;
+        font-size: 15px;
+    }
+
     .principal div{
         width: 350px;
         display: flex;
