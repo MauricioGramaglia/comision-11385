@@ -1,0 +1,31 @@
+/*----------- HEADER -------------*/
+header{
+    background-color: white;
+    @extend %flex;
+    a{
+        img{
+            width: 250px;
+            height: 160px;
+        }
+    }
+    nav{
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            li{
+                list-style: none;
+                margin: 20px;
+                transition: 0.6s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                a{
+                    text-decoration: none;
+                    color: rgb(92, 92, 92);
+                }
+            }
+        }
+    }
+
+}

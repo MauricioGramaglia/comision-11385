@@ -1,0 +1,116 @@
+/*----------- GENERALES ------------*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.title-sec{
+    margin-top: 20px;
+    color: white;
+    font-size: 40px;
+    padding: 4%;
+    padding-left: 40px;
+    background-color: rgb(67, 179, 231);
+}
+
+.desc-dep{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    padding: 2%;
+    padding-bottom: 20px;
+    li{
+        list-style: none;
+    }
+}
+
+.dptos-cuatro{
+    padding: 1%;
+}
+
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.img-servicio{
+    width: auto;
+    height: auto;
+}
+
+
+
+.container{
+    @extend %flex;
+
+}
+
+
+
+
+/**---------GRID GALERIA-----------*/
+
+.grid-galeria{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding: 20px;
+        /* grid-template-rows: ; */
+        grid-auto-rows: 250px;
+        gap: 15px;
+    
+    div{
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 0px 0px 10px -1px rgba(22,120,235,1);
+        -webkit-box-shadow: 0px 0px 10px -1px rgba(22,120,235,1);
+        -moz-box-shadow: 0px 0px 10px -1px rgba(22,120,235,1);
+        transition: 0.6s;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+}
+
+.img-4{
+    grid-area: span 2;
+}
+
+.img-3{
+    grid-area: span 2;
+}
+
+.img-6{
+    grid-area: span 2;
+}
+
+.grid-dep{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 20px;
+    /* grid-template-rows: ; */
+    grid-auto-rows: 250px;
+    gap: 10px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+    .formulario{
+        text-align: center;
+    }
+    
+    .enviar-form{
+        padding: 1%;
+    }
+}
