@@ -22,4 +22,9 @@ $color-terciario: cornflowerblue;
     justify-content: center;
     align-items: center;
 }
+%flexend{
+    display: flex;
+    justify-content:center;
+    align-items:flex-end;
+}
 

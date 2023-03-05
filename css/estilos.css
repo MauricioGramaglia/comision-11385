@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*----------- GENERALES ------------*/
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,700;1,900&family=Noto+Sans:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  font-family: 'Merriweather', serif; }
 
 .title-sec {
   margin-top: 20px;
@@ -14,16 +14,6 @@
   padding: 4%;
   padding-left: 40px;
   background-color: #43b3e7; }
-
-.desc-dep {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 18px;
-  padding: 2%;
-  padding-bottom: 20px; }
-  .desc-dep li {
-    list-style: none; }
 
 .dptos-cuatro {
   padding: 1%; }
@@ -36,6 +26,11 @@
 .img-servicio {
   width: auto;
   height: auto; }
+
+.carousel-inner img {
+  object-fit: scale-down;
+  height: 50vh;
+  width: 100%; }
 
 /**---------GRID GALERIA-----------*/
 .grid-galeria {
@@ -77,10 +72,15 @@
   .grid-galeria .enviar-form {
     padding: 1%; }
 
-.container, header, .hero, .principal, .principal div, .serv, .serv div a, .servicios-2 {
+.container, header, .principal, .principal div, .serv, .serv div a {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
 
 /*----------- HEADER -------------*/
 header {
@@ -106,7 +106,8 @@ header {
 .hero {
   text-align: center;
   width: 100%;
-  height: 80vh;
+  height: 75vh;
+  font-family: 'Merriweather', serif;
   color: white;
   background-image: url(../img/imgprincipal.jpg);
   background-position: center;
@@ -116,7 +117,7 @@ header {
   flex-direction: column; }
   .hero div {
     width: 500px;
-    background-color: rgba(85, 195, 254, 0.664);
+    background-color: rgba(95, 195, 254, 0.864);
     border-radius: 0.5rem;
     padding: 20px;
     margin: 5px; }
@@ -131,42 +132,46 @@ header {
 .principal {
   flex-direction: column; }
   .principal div {
-    width: 500px;
-    flex-direction: column; }
+    text-align: center;
+    flex-direction: column;
+    margin-top: 40px; }
     .principal div h2 {
-      font-size: 35px;
+      font-size: 40px;
       text-align: center;
-      padding: 20px;
-      font-style: italic; }
+      font-style: italic;
+      font-family: 'Merriweather', serif; }
       .principal div h2 h3 {
         font-size: 30px;
-        font-style: italic; }
+        font-style: italic;
+        text-align: center; }
         .principal div h2 h3 p {
-          text-align: center;
-          padding: 15px; }
+          margin-top: 25px; }
 
 /*---------- SECTION SERVICIOS -------------*/
 .serv {
   flex-wrap: wrap; }
   .serv div {
-    border: 1px solid grey;
-    width: 302px;
-    height: 300px;
+    border: 1px solid rgba(128, 128, 128, 0.549);
+    box-shadow: 0px 0px 10px -1px #afb0b1;
+    -webkit-box-shadow: 0px 0px 10px -1px #b3b6b9;
+    -moz-box-shadow: 0px 0px 10px -1px #9fa1a4;
+    width: 380px;
+    height: 330px;
     margin: 30px;
     text-align: center; }
     .serv div:hover {
-      width: 302px;
-      height: 300px;
-      box-shadow: 0px 0px 10px -1px #1678eb;
-      -webkit-box-shadow: 0px 0px 10px -1px #1678eb;
-      -moz-box-shadow: 0px 0px 10px -1px #1678eb; }
+      width: 380px;
+      height: 330px;
+      box-shadow: 0px 0px 10px -2px #1678eb;
+      -webkit-box-shadow: 0px 0px 10px -2px #1678eb;
+      -moz-box-shadow: 0px 0px 10px -2px #1678eb; }
     .serv div a {
       text-decoration: none;
       color: black;
       font-size: 20px;
-      padding-bottom: 5px; }
+      padding-bottom: 15px; }
       .serv div a img {
-        width: 300px;
+        width: 380px;
         height: 250px; }
 
 /*---------- PAGE CABAÑAS -----------*/
@@ -176,12 +181,10 @@ header {
   align-items: center;
   padding: 2%;
   padding-bottom: 20px; }
-  .cabana div {
-    width: 800px; }
-    .cabana div img {
-      padding: 15px;
-      width: 650px;
-      height: 520px; }
+  .cabana img {
+    padding: 15px;
+    width: 650px;
+    height: 420px; }
 
 /*-------- PAGE SERVICIOS ----------*/
 .servicios-2 {
@@ -206,6 +209,24 @@ header {
         text-align: center;
         padding: 15px; }
 
+.departamentos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2%;
+  padding-bottom: 20px; }
+  .departamentos img {
+    padding: 15px;
+    width: 650px;
+    height: 420px; }
+
+.desc-dep {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+  padding-bottom: 20px; }
+
 /*---------PAGE SERVICIOS---------*/
 .servicios-2 {
   padding: 30px; }
@@ -213,11 +234,12 @@ header {
 .servicios-1 {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row-reverse; }
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  padding: 25px; }
   .servicios-1 h1 img {
-    width: 600px;
-    height: 400px; }
+    width: 500px;
+    height: 380px; }
     .servicios-1 h1 img div {
       width: 700px;
       text-align: center; }
@@ -228,7 +250,7 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px; }
+  padding: 40px; }
   .pie .redes a img {
     width: 45px;
     height: 45px;
@@ -236,20 +258,20 @@ header {
     transition: 1s; }
     .pie .redes a img:hover {
       transform: translateY(-15px); }
-    .pie .redes a img h3 {
-      font-size: 25px;
+    .pie .redes a img h4 {
+      font-size: 20px;
       font-style: italic;
-      padding: 20px; }
-      .pie .redes a img h3 p {
+      padding: 30px; }
+      .pie .redes a img h4 p {
         font-size: 15px;
-        padding: 15px; }
+        padding: 25px; }
 
 .mapita {
   padding-top: 15px;
   width: 100%; }
 
 .website {
-  padding: 15px;
+  padding: 12px;
   background-position: center; }
 
 .img-act {
@@ -267,14 +289,13 @@ header {
 /*-------- MEDIA QUERY ---------*/
 @media screen and (max-width: 1300px) {
   .servicios-2 {
-    display: flex;
-    flex-direction: column; }
+    display: flex; }
   .servicios-1 {
     display: flex;
     flex-direction: column; }
     .servicios-1 img {
-      width: 500px;
-      height: 350px;
+      width: 400px;
+      height: 320px;
       padding: 20px; }
       .servicios-1 img div {
         padding: 20px; }
@@ -283,13 +304,14 @@ header {
           padding: 15px; } }
 
 @media screen and (max-width: 1150px) {
-  .cabana div {
-    width: 500px;
-    text-align: center; }
-    .cabana div img {
-      padding: 10px;
-      width: 500px;
-      height: 450px; }
+  .cabana {
+    flex-direction: column; }
+    .cabana div {
+      text-align: center; }
+      .cabana div img {
+        padding: 10px;
+        width: 500px;
+        height: 450px; }
   .servicios-2 {
     display: flex;
     flex-direction: column;
@@ -305,13 +327,12 @@ header {
     flex-direction: column;
     padding: 5px; } }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1100px) {
   header nav ul {
     flex-direction: column; }
   .cabana {
     flex-direction: column; }
     .cabana div {
-      width: 700px;
       text-align: center; }
       .cabana div h2 p img {
         padding: 10px;
@@ -370,13 +391,9 @@ header {
           font-size: 15px;
           font-style: italic;
           padding: 10px; }
-  .cabana div {
-    width: auto;
-    text-align: center; }
-    .cabana div img {
-      padding: 10px;
-      width: 350px;
-      height: 290px; }
+  .cabana img {
+    width: 350px;
+    height: 300px; }
   .pie h3 {
     font-size: 15px;
     font-style: italic;
@@ -389,21 +406,44 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 15px;
-    padding: 2%;
-    padding-bottom: 20px; } }
+    font-size: 15px; } }
+
+.servicios-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .servicios-1 img {
+    width: 340px;
+    height: 300px;
+    padding: 20px; }
+    .servicios-1 img div {
+      padding: 20px; }
+      .servicios-1 img div h2 p {
+        width: 600px;
+        text-align: center;
+        padding: 15px; }
 
 @media screen and (max-width: 450px) {
   .hero h1 {
     font-size: 20px; }
-  .servicio div {
-    width: 320px;
-    height: 200px;
-    display: inline-block;
-    padding: 5px;
-    box-shadow: 0px 0px 1px -1px #1678eb;
-    -webkit-box-shadow: 0px 0px 1px -1px #1678eb;
-    -moz-box-shadow: 0px 0px 1px -1px #1678eb; }
+  .serv div {
+    border: 1px solid rgba(128, 128, 128, 0.549);
+    box-shadow: 0px 0px 10px -1px #afb0b1;
+    -webkit-box-shadow: 0px 0px 10px -1px #b3b6b9;
+    -moz-box-shadow: 0px 0px 10px -1px #9fa1a4;
+    width: 345px;
+    height: 320px;
+    margin: 30px;
+    text-align: center; }
+    .serv div:hover {
+      width: 380px;
+      height: 330px;
+      box-shadow: 0px 0px 10px -2px #1678eb;
+      -webkit-box-shadow: 0px 0px 10px -2px #1678eb;
+      -moz-box-shadow: 0px 0px 10px -2px #1678eb; }
+    .serv div a img {
+      width: 345px;
+      height: 230px; }
   .grid-galeria {
     grid-template-columns: 1fr; }
   .grid-item {
@@ -415,26 +455,33 @@ header {
     width: 100%;
     font-size: 15px; }
     .servicios-1 div img {
-      width: 350px;
+      width: 340px;
       height: 250px; }
-  .principal {
-    padding: 20px; }
-    .principal div {
-      width: 350px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .principal div h2 {
-        font-size: 30px;
-        text-align: center;
-        padding: 10px;
-        font-style: italic; }
-        .principal div h2 h3 {
-          font-size: 20px;
-          font-style: italic; }
-          .principal div h2 h3 p {
-            text-align: center; }
+      .servicios-1 div img p {
+        width: 340px; }
+  .cabana img {
+    padding: 10px;
+    width: 350px;
+    height: 300px; }
+  .principal div {
+    width: 345px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .principal div h2 {
+      font-size: 30px;
+      text-align: center;
+      padding: 10px;
+      font-style: italic;
+      font-style: inherit; }
+      .principal div h2 h3 {
+        font-size: 15px;
+        font-style: italic;
+        text-align: center; }
+        .principal div h2 h3 p {
+          text-align: center;
+          width: 348px; }
   .fixed {
     position: fixed;
     right: 20px;
@@ -442,4 +489,30 @@ header {
   .img-act {
     width: 100%;
     height: 35vh;
-    padding: 1%; } }
+    padding: 1%; }
+  .title-sec {
+    margin-top: 20px;
+    color: white;
+    font-size: 35px;
+    padding: 4%;
+    padding-left: 40px;
+    background-color: #43b3e7; }
+  .pie {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .pie .redes a img {
+      width: 45px;
+      height: 45px;
+      padding: 5px;
+      transition: 1s; }
+      .pie .redes a img:hover {
+        transform: translateY(-15px); }
+      .pie .redes a img h4 {
+        font-size: 12px;
+        font-style: italic;
+        padding: 20px; }
+        .pie .redes a img h4 p {
+          font-size: 10px;
+          padding: 15px; } }
