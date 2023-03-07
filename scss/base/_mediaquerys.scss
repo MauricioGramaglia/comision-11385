@@ -87,6 +87,10 @@
     flex-direction: column;
     
 }
+
+.departamentos{
+    flex-direction: column;
+}
 .grid-galeria{
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 220px;
